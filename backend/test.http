@@ -1,0 +1,30 @@
+
+POST http://localhost:8000/api/employees/add
+Content-Type: application/json
+
+{
+    "name": "Tanaka",
+    "surname": "Mahapa",
+    "gender": "Male",
+    "department": "Engineering",
+    "salary": 50000
+}
+
+
+GET http://localhost:8000/api/employees/all
+
+GET http://localhost:8000/api/employees/department/Engineering
+
+PUT http://localhost:8000/api/employees/update/:id
+Content-Type: application/json
+
+{
+    "name": "Tanaka",
+    "surname": "Mahapa",
+    "gender": "Male",
+    "department": "Information Technology",
+    "salary": 55000
+}
+
+
+DELETE http://localhost:8000/api/employees/delete/:id
