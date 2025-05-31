@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-require('dotenv').config();
+
 
 const PORT = process.env.PORT || 8000;
 const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/your-db-name';
@@ -24,7 +25,8 @@ app.use('/',(req, res) => {
 });
 
 
-mongoose.connect(process.env.DB_URL)
+mongoose.connect(DB_URL)
+
     .then(() => {
         console.log('Successful connection to the database');
         console.log('Database URL:', DB_URL);
