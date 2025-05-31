@@ -1,2 +1,0 @@
-# FullStackApp
-Full Stack App 
